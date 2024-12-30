@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
 // Header Component
 const Header = ({ toggleTheme, isDarkMode }) => {
   return (
     <header>
-      <div className="logo">Esther Kim</div>
+      <div className="logo">KDY</div>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -18,13 +20,12 @@ const Header = ({ toggleTheme, isDarkMode }) => {
     </header>
   );
 };
-
 // Hero Section Component
 const Hero = () => {
   return (
     <section className="hero">
       <div>
-        <h1>Welcome to Esther's Portfolio</h1>
+        <h1>I'm Esther Kim</h1>
         <p>Web Developer | React Expert | Problem Solver</p>
         <button onClick={() => window.scrollTo({ top: document.getElementById('about').offsetTop, behavior: 'smooth' })}>
           Learn More About Me
@@ -33,28 +34,6 @@ const Hero = () => {
     </section>
   );
 };
-
-// About Section Component
-const About = () => {
-  return (
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi, I'm Esther, a passionate web developer focused on creating engaging and user-friendly websites and applications.</p>
-      <p>With a focus on front-end technologies like React, I aim to build modern and responsive websites that provide excellent user experiences.</p>
-    </section>
-  );
-};
-
-// Projects Section Component
-const Projects = () => {
-  return (
-    <section id="projects">
-      <h2>My Projects</h2>
-      <p>Here are some of the projects I've worked on...</p>
-    </section>
-  );
-};
-
 // Resume Section Component
 const Resume = () => {
   return (
@@ -64,17 +43,7 @@ const Resume = () => {
     </section>
   );
 };
-
-// Contact Section Component
-const Contact = () => {
-  return (
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Feel free to get in touch with me!</p>
-    </section>
-  );
-};
-
+ 
 // Footer Component
 const Footer = () => {
   return (
