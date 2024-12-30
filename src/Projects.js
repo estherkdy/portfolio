@@ -8,14 +8,14 @@ const Projects = () => {
       description: 'A chart visualization creator using Coordinated Multiple Views',
       image: 'https://via.placeholder.com/300',
       tags: ['React', 'MongoDB', 'JavaScript'],
-      githubLink: 'https://github.com/yourusername/project1',
+      githubLink: 'https://github.com/estherkdy/chartmaker',
     },
     {
       title: 'Fitness App',
       description: 'Full Stack Calorie-tracking application',
       image: 'https://via.placeholder.com/300',
-      tags: ['MySQL', 'React', 'Backend'],
-      githubLink: 'https://github.com/yourusername/project2',
+      tags: ['MySQL', 'React', 'Python'],
+      githubLink: 'https://github.com/estherkdy/fitnessApp',
     },
     {
       title: 'Data Analysis Project',

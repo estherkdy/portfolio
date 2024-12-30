@@ -3,33 +3,38 @@
     padding: 50px 0; 
   }
   
+  /* Wrapper for Projects Cards */
   .project-cards-wrapper {
     padding: 0 10%; 
   }
   
+  /* Projects Cards Container */
   .project-cards-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /*   gap between cards */
+    gap: 20px; /* Decrease the gap between cards */
     flex-wrap: wrap;
     margin-top: 30px;
   }
   
+  /* Individual Project Card */
   .project-card {
-    background-color: var(--primary);
+    background-color: var(--primary); /* Default to dark mode background */
     color: var(--dark-text);
-    width: 28%;  
+    width: 29%;  
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
+  /* Hover Effect for Project Cards */
   .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
   
+  /* Thumbnail Styling for Project Cards */
   .project-thumbnail img {
     width: 100%;
     height: auto;
@@ -37,18 +42,21 @@
     border-bottom: 5px solid var(--primary-dark);
   }
   
+  /* Title Styling for Project Cards */
   .project-card h3 {
     font-size: 1.5rem;
     margin: 20px;
     color: var(--dark-text);
   }
   
+  /* Description Styling for Project Cards */
   .project-card p {
     font-size: 1.1rem;
     margin: 0 20px 20px 20px;
     color: var(--light-accent);
   }
   
+  /* GitHub Link Styling */
   .github-link {
     display: block;
     margin: 0 20px 20px 20px;
@@ -61,11 +69,13 @@
     transition: background-color 0.3s ease;
   }
   
+  /* Hover Effect for GitHub Link */
   .github-link:hover {
     background-color: var(--primary-dark);
     color: white;
   }
   
+  /* Tags Section Styling */
   .tags { 
     display: flex;
     flex-wrap: wrap;
@@ -74,10 +84,12 @@
     margin-bottom: 20px;
   }
   
+  /* Tags Label Styling */
   .tags-label {
     font-weight: bold;  
   }
   
+  /* Individual Tag Styling */
   .tag {
     background-color: var(--primary-dark);
     color: var(--dark-text);
@@ -88,4 +100,28 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
+  /* Light Mode Adjustments */
+  body.light-mode .project-card {
+    background-color: var(--light-bg); /* Light mode background for the card */
+  }
   
+  body.light-mode .project-card h3,
+  body.light-mode .project-card p {
+    color: var(--light-text); /* Light text color for headings and paragraphs */
+  }
+  
+  body.light-mode .github-link {
+    color: var(--primary-btn-bg); /* Keep the GitHub link color in light mode */
+  }
+  
+  /* Light Mode Tags */
+  body.light-mode .tag {
+    background-color: var(--primary-dark); /* Use dark background for tags */
+    color: var(--light-text); /* Light color for tag text */
+    border-color: var(--primary-btn-bg); /* Adjust border color for light mode */
+  }
+  body.light-mode .tag {
+    background-color: var(--primary-dark); /* Dark background for tags */
+    color: white; /* Change tag text color to white in light mode */
+    border-color: var(--primary-btn-bg); /* Adjust border color for light mode */
+  }

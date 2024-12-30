@@ -26,7 +26,7 @@ const Hero = () => {
     <section className="hero">
       <div>
         <h1>I'm Esther Kim</h1>
-        <p>Web Developer | React Expert | Problem Solver</p>
+        <p>Web Developement | Database Management | Problem Solving</p>
         <button onClick={() => window.scrollTo({ top: document.getElementById('about').offsetTop, behavior: 'smooth' })}>
           Learn More About Me
         </button>
