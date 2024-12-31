@@ -50,7 +50,7 @@ const Footer = () => {
     <footer>
       <div className="social-links">
         <a href="https://github.com/estherkdy" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/estherkdy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/estherkimmy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
       <p>Esther Kim</p>
     </footer>
