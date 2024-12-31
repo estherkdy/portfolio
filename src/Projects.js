@@ -1,5 +1,5 @@
 import React from 'react';
-import './Projects.css'; // Import the new CSS for the projects section
+import './Projects.css'; 
 
 const Projects = () => {
   const projects = [
@@ -21,7 +21,7 @@ const Projects = () => {
       title: 'Data Analysis Project',
       description: 'Data Analysis of top Universities in Virginia',
       image: 'https://via.placeholder.com/300',
-      tags: ['Python','Frontend'],
+      tags: ['Python','Data Science', 'Modeling'],
       githubLink: 'https://github.com/estherkdy/CS3654-Project',
       
     }
