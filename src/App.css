@@ -112,6 +112,37 @@
     background-color: var(--primary-dark);
     color: white;
   }
+  header .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Responsive Header */
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--primary);
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  header .mobile-menu {
+    display: flex;
+  }
+
+  header .menu-toggle {
+    display: block;
+  }
+}
+
   
   /* Hero Section */
   .hero {

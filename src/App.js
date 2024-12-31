@@ -5,21 +5,30 @@ import Projects from './Projects';
 import Contact from './Contact';
 // Header Component
 const Header = ({ toggleTheme, isDarkMode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <header>
       <div className="logo">KDY</div>
-      <nav>
+      <nav className={isMenuOpen ? 'mobile-menu' : ''}>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button className="menu-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
       <button onClick={toggleTheme}>
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
     </header>
   );
 };
+
+
 // Hero Section Component
 const Hero = () => {
   return (

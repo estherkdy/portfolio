@@ -11,13 +11,13 @@
   /* Projects Cards Container */
   .project-cards-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Decrease the gap between cards */
+    justify-content: center; 
+    gap: 20px;
     flex-wrap: wrap;
     margin-top: 30px;
   }
-  
-  /* Individual Project Card */
+ 
+ 
   .project-card {
     background-color: var(--primary); /* Default to dark mode background */
     color: var(--dark-text);
