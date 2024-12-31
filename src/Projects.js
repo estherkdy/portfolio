@@ -22,7 +22,7 @@ const Projects = () => {
       description: 'Data Analysis of top Universities in Virginia',
       image: 'https://via.placeholder.com/300',
       tags: ['Python','Frontend'],
-      githubLink: 'https://github.com/yourusername/project3',
+      githubLink: 'https://github.com/estherkdy/CS3654-Project',
       
     }
   ];
