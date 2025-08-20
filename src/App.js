@@ -16,11 +16,11 @@ const Header = ({ toggleTheme, isDarkMode }) => {
     <header>
       <div className="logo">KDY</div>
       <nav className={isMenuOpen ? "mobile-menu" : ""}>
-        <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/resume">Resume</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
+  <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
+  <Link to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+  <Link to="/resume" onClick={() => setIsMenuOpen(false)}>Resume</Link>
+  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+</nav>
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
       </button>
@@ -77,12 +77,16 @@ const App = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setIsDarkMode(true);
-      document.body.classList.add("dark-mode");
-    } else {
+  
+    if (savedTheme === "light") {
       setIsDarkMode(false);
       document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
+    } else {
+      // Default to dark mode
+      setIsDarkMode(true);
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
     }
   }, []);
 
