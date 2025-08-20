@@ -1,0 +1,49 @@
+/* Resume Section */
+.resume-section {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--dark-text);
+    padding: 0px 1rem 50px 1rem; /* top padding matches header height */
+  }
+  
+  body.light-mode .resume-section {
+    background-color: var(--primary-light);
+    color: var(--light-text);
+  }
+  
+  .resume-container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: left; /* left-align like About page */
+  }
+  
+  .resume-container h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .resume-container hr {
+    border: none;
+    border-top: 2px solid var(--primary-btn-bg);
+    width: 99%;
+    max-width: 1000px;
+    margin: 10px auto 30px auto;
+  }
+  
+  .resume-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .resume-container h1 {
+      font-size: 2.5rem;
+    }
+    .resume-container p {
+      font-size: 1.1rem;
+    }
+  }
+  

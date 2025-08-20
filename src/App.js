@@ -1,65 +1,70 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+
+import About from "./About";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import Resume from "./Resume";
+
 // Header Component
 const Header = ({ toggleTheme, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <header>
       <div className="logo">KDY</div>
-      <nav className={isMenuOpen ? 'mobile-menu' : ''}>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+      <nav className={isMenuOpen ? "mobile-menu" : ""}>
+        <Link to="/about">About</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/resume">Resume</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
       </button>
       <button onClick={toggleTheme}>
-        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+        {isDarkMode ? "Light Mode" : "Dark Mode"}
       </button>
     </header>
   );
 };
 
-
-// Hero Section Component
+// Hero Section Component (Homepage)
 const Hero = () => {
   return (
     <section className="hero">
       <div>
         <h1>I'm Esther Kim</h1>
-        <p>Web Developement | Database Management | Problem Solving</p>
-        <button onClick={() => window.scrollTo({ top: document.getElementById('about').offsetTop, behavior: 'smooth' })}>
-          Learn More About Me
-        </button>
+        <p>Web Development | Database Management | Problem Solving</p>
+        <Link to="/about">
+          <button>Learn More About Me</button>
+        </Link>
       </div>
     </section>
   );
 };
-// Resume Section Component
-const Resume = () => {
-  return (
-    <section id="resume">
-      <h2>My Resume</h2>
-      <p>Download my resume here.</p>
-    </section>
-  );
-};
- 
+
 // Footer Component
 const Footer = () => {
   return (
     <footer>
       <div className="social-links">
-        <a href="https://github.com/estherkdy" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/estherkimmy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a
+          href="https://github.com/estherkdy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/estherkimmy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
       </div>
       <p>Esther Kim</p>
     </footer>
@@ -68,47 +73,52 @@ const Footer = () => {
 
 // Main App Component
 const App = () => {
-  // Dark Mode/Light Mode state
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    // Load the theme from localStorage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
       setIsDarkMode(true);
-      document.body.classList.add('dark-mode');
+      document.body.classList.add("dark-mode");
     } else {
       setIsDarkMode(false);
-      document.body.classList.add('light-mode');
+      document.body.classList.add("light-mode");
     }
   }, []);
 
   const toggleTheme = () => {
-    setIsDarkMode(prevMode => {
+    setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
       if (newMode) {
-        localStorage.setItem('theme', 'dark');
-        document.body.classList.add('dark-mode');
-        document.body.classList.remove('light-mode');
+        localStorage.setItem("theme", "dark");
+        document.body.classList.add("dark-mode");
+        document.body.classList.remove("light-mode");
       } else {
-        localStorage.setItem('theme', 'light');
-        document.body.classList.add('light-mode');
-        document.body.classList.remove('dark-mode');
+        localStorage.setItem("theme", "light");
+        document.body.classList.add("light-mode");
+        document.body.classList.remove("dark-mode");
       }
       return newMode;
     });
   };
 
   return (
-    <div className="App">
-      <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-      <Hero />
-      <About />
-      <Projects />
-      <Resume />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+
+        {/* Define Page Routes */}
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
