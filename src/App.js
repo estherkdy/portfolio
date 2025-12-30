@@ -37,7 +37,7 @@ const Hero = () => {
     <section className="hero">
       <div>
         <h1>I'm Esther Kim</h1>
-        <p>Web Development | Database Management | Problem Solving</p>
+        <p>Audio Visual Programming | Network Engineering | Web Development</p>
         <Link to="/about">
           <button>Learn More About Me</button>
         </Link>

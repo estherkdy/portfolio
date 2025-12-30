@@ -12,16 +12,17 @@ const About = () => {
             <img src="/profilepic.jpeg" alt="Esther Kim" />
           </div>
           <p>
-            Hi, I'm Esther, a passionate web developer focused on creating
-            engaging and user-friendly websites and applications.
+            Hi, I'm Esther. I like chasing the world of technology.
           </p>
           <p>
-            With a focus on front-end technologies like React, I aim to build
+            Passionate in Audio Visual control systems and how we interact with data. 
+
+            With a focus on front-end technologies, I also build
             modern and responsive websites that provide excellent user
             experiences.
           </p>
           <p>
-            I also have experience in data analytics, visualization, and
+            My interests include network engineering, data analytics, visualization, and
             project management, allowing me to tackle both technical and
             organizational challenges.
           </p>
