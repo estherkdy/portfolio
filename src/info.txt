@@ -1,0 +1,5 @@
+npm run build
+
+npm run deploy
+
+go to github repo update custom domain 
