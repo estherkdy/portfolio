@@ -1,5 +1,7 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import './Contact.css';
+
+const CONTACT_EMAIL = 'estherkimmy@protonmail.com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,17 +17,25 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message Sent!'); 
+
+    const subject = encodeURIComponent(`Portfolio message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `${formData.message}\n\n---\nFrom: ${formData.name}\nReply to: ${formData.email}`
+    );
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
     setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <section id="contact" className="contact-section">
-      <div className="contact-container">
+    <section id="contact" className="section contact-section">
+      <div className="section-container contact-container">
         <h1>Contact Me</h1>
+        <hr />
         <div className="contact-info">
-          <p>Email: <a href="mailto:estherkdy@vt.edu">estherkdy@vt.edu</a></p>
-        </div> 
+          <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+        </div>
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
             <label htmlFor="name">Name</label>
@@ -67,6 +77,7 @@ const Contact = () => {
           </div>
 
           <button type="submit" className="submit-btn">Send Message</button>
+          <p className="form-hint">This opens your email app with the message ready to send to me directly.</p>
         </form>
       </div>
     </section>

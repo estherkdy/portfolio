@@ -4,7 +4,7 @@
   justify-content: center;
   background-color: var(--primary);
   color: var(--dark-text);
-  padding: 0px 1rem 50px 1rem; /* top padding matches header height */
+  padding: 64px 24px 80px 24px;
 }
 
 body.light-mode .section {
@@ -13,157 +13,169 @@ body.light-mode .section {
 }
 
 .section-container {
-  max-width: 1000px;
+  max-width: var(--max-width);
   width: 100%;
 }
 
-/* Header and HR */
 .section-container h1 {
-  font-size: 3rem;
+  font-size: 2.75rem;
   margin-bottom: 10px;
-  text-align: left; /* align like About page */
+  text-align: left;
 }
 
 .section-container hr {
   border: none;
-  border-top: 2px solid var(--primary-btn-bg);
-  width: 99%;
-  max-width: 1000px;
-  margin: 10px 0 30px 0;
-  text-align: left;
+  border-top: 2px solid var(--dark-border);
+  width: 100%;
+  margin: 0 0 40px 0;
 }
 
-/* About Section Specific */
-.about-container {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.about-image img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--primary-btn-bg);
-}
+body.light-mode .section-container hr { border-top-color: var(--light-border); }
 
 /* Projects Cards Container */
 .projects-container .project-cards-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 10px;
 }
 
 /* Project Card */
 .project-card {
-  background-color: var(--primary);
+  background-color: var(--dark-card);
+  border: 1px solid var(--dark-border);
   color: var(--dark-text);
-  width: 29%;
-  border-radius: 10px;
+  border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  display: flex;              /* make card flexbox */
-  flex-direction: column;     /* stack children vertically */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
 }
 
+body.light-mode .project-card {
+  background-color: var(--light-card);
+  border-color: var(--light-border);
+  color: var(--light-text);
+}
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card.placeholder-card {
+  opacity: 0.85;
+  border-style: dashed;
 }
 
 .project-thumbnail img {
   width: 100%;
-  height: 250px;
+  height: 190px;
   object-fit: cover;
-  border-bottom: 3px solid var(--primary-dark);
+  display: block;
 }
+
+.thumbnail-fallback {
+  width: 100%;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--primary-dark));
+}
+
+.thumbnail-fallback span {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.project-card-body {
+  padding: 20px 22px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-card h3 { font-size: 1.2rem; margin: 0 0 8px 0; }
+
+.project-card p {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--dark-text-muted);
+  margin: 0 0 16px 0;
+  flex: 1;
+}
+
+body.light-mode .project-card p { color: var(--light-text-muted); }
 
 /* Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  justify-content: center;
-  margin-bottom: 20px;
+  gap: 6px;
+  margin-bottom: 18px;
 }
 
 .tag {
-  background-color: var(--primary-dark);
-  color: var(--dark-text);
-  padding: 2px 15px;
+  background-color: rgba(76, 124, 240, 0.12);
+  color: var(--accent);
+  padding: 4px 12px;
   border-radius: 20px;
-  font-size: 1.1rem;
-  border: 2px solid var(--light-accent);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
-/* Light Mode Adjustments */
-body.light-mode .project-card {
-  background-color: var(--light-bg);
-}
-body.light-mode .project-card h3,
-body.light-mode .project-card p {
-  color: var(--light-text);
-}
-body.light-mode .tag {
-  background-color: var(--primary-dark);
-  color: white;
-  border-color: var(--primary-btn-bg);
-}
-
-/* Responsive */
-@media(max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .about-image img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .section-container h1 {
-    font-size: 2.5rem;
-  }
-
-  .project-card {
-    width: 90%;
-  }
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .github-link {
   color: var(--dark-text);
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--dark-border);
+  border-radius: 8px;
   display: inline-block;
   text-align: center;
-  margin-top: auto;           /* pushes link to bottom */
-  align-self: center;         /* centers horizontally */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
+.demo-link {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.demo-link:hover { background-color: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+
+body.light-mode .github-link { color: var(--light-text); border-color: var(--light-border); }
 
 .github-link:hover {
-  background-color: var(--primary-dark);
-  color: white;
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 
-/* Light mode override */
-body.light-mode .github-link {
-  color: var(--light-text);
+.status-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background-color: rgba(154, 167, 184, 0.15);
+  color: var(--dark-text-muted);
 }
 
-body.light-mode .github-link:hover {
-  background-color: var(--primary-btn-bg);
-  color: white;
+body.light-mode .status-badge { color: var(--light-text-muted); }
+
+@media(max-width: 768px) {
+  .section-container h1 { font-size: 2.2rem; }
 }
