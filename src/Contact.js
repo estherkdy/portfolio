@@ -20,7 +20,7 @@ const Contact = () => {
 
     const subject = encodeURIComponent(`Portfolio message from ${formData.name}`);
     const body = encodeURIComponent(
-      `${formData.message}\n\n---\nFrom: ${formData.name}\nReply to: ${formData.email}`
+      `${formData.message}\n\nFrom: ${formData.name}\nReply to: ${formData.email}`
     );
 
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;

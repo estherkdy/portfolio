@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, NavLink, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink, Link, useLocation } from "react-router-dom";
 import "./App.css";
 
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Resume from "./Resume";
+
+// Scrolls to the top of the page on every route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 // Header Component
 const Header = ({ toggleTheme, isDarkMode }) => {
@@ -50,13 +61,13 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hero-badge-link"
-            title="AVIXA Certified Technology Specialist — view certificate"
+            title="AVIXA Certified Technology Specialist - view certificate"
           >
             <img src="/CTS_small_badge_EstherKim.png" alt="AVIXA CTS Certified" className="hero-badge" />
           </a>
         </h1>
         <p className="tagline">
-          AV Control Systems Programmer building reliable, well-documented systems —
+          AV Control Systems Programmer building reliable, well-documented systems -
           with a growing focus on network engineering, data, and cybersecurity.
         </p>
         <div className="hero-actions">
@@ -136,6 +147,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
 
         {/* Define Page Routes */}

@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: 'Team Hub',
       description: 'An internal browser-based tool combining a live project/room status tracker with a searchable knowledge base, built to replace scattered notes with one shared source of truth for an AV programming team.',
-      // TODO: replace with a real screenshot — drop the image file in /public and set image: 'teamhub.png'
+      // TODO: replace with a real screenshot - drop the image file in /public and set image: 'teamhub.png'
       tags: ['JavaScript', 'HTML/CSS', 'Team Tooling', 'Local Storage'],
       githubLink: 'https://github.com/estherkdy/team-hub',
       demoLink: 'https://estherkdy.github.io/team-hub/',
@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: 'SP Hub',
       description: 'A guided Python desktop application for building the configuration files an internal AV control-system framework uses to instantiate a room. Write-up and demo coming soon.',
-      // TODO: replace with a real screenshot — drop the image file in /public and set image: 'sphub.png'
+      // TODO: replace with a real screenshot - drop the image file in /public and set image: 'sphub.png'
       tags: ['Python', 'CustomTkinter', 'AV Programming'],
       status: 'Coming Soon',
       placeholder: true,

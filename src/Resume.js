@@ -12,7 +12,7 @@ const skills = [
   },
   {
     label: 'Networking & On-Site System Configuration',
-    text: "Configuring network settings for freshly installed rooms end-to-end — IP addressing, device network configuration, and connectivity troubleshooting."
+    text: "Configuring network settings for freshly installed rooms end-to-end - IP addressing, device network configuration, and connectivity troubleshooting."
   },
   {
     label: 'Device Configuration',
@@ -46,7 +46,7 @@ const Resume = () => {
       <div className="section-container resume-container">
         <h1>Resume</h1>
         <hr />
-        <p>My resume is being finalized — check back soon for the downloadable version.</p>
+        <p>My resume is being finalized - check back soon for the downloadable version.</p>
         <button className="btn-secondary resume-download" disabled>
           Download Resume (Coming Soon)
         </button>
