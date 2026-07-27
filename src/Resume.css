@@ -18,3 +18,48 @@ body.light-mode .resume-container p { color: var(--light-text-muted); }
 }
 
 .resume-download:hover { transform: none; background-color: transparent; }
+
+/* Skills block */
+.skills-block { margin-top: 44px; }
+
+.skills-block h2 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skills-list li {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--dark-text-muted);
+  padding-left: 18px;
+  position: relative;
+}
+
+body.light-mode .skills-list li { color: var(--light-text-muted); }
+
+.skills-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.skills-list li strong {
+  color: var(--dark-text);
+  font-weight: 700;
+}
+
+body.light-mode .skills-list li strong { color: var(--light-text); }

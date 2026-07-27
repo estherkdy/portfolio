@@ -30,7 +30,8 @@ const About = () => {
             <span>Network Engineering</span>
             <span>Data Analytics</span>
             <span>Cybersecurity</span>
-            <span>Project Management</span>
+            <span>Data Control</span>
+            <span>Work Management</span>
           </div>
 
           <div className="certifications">
