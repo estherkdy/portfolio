@@ -6,6 +6,7 @@ const Projects = () => {
     {
       title: 'Security+ Drill',
       description: 'A self-contained study tool built while preparing for the CompTIA Security+ (SY0-701) exam - timed scope drills, flashcards, a dedicated acronym trainer, and a full card manager with import/export and a missed-question review deck.',
+      image: 'secplus.png',
       tags: ['JavaScript', 'HTML/CSS', 'Cybersecurity', 'Local Storage'],
       githubLink: 'https://github.com/estherkdy/security-plus-drill',
       demoLink: 'https://estherkdy.github.io/security-plus-drill/',
@@ -13,7 +14,7 @@ const Projects = () => {
     {
       title: 'Team Hub',
       description: 'An internal browser-based tool combining a live project/room status tracker with a searchable knowledge base, built to replace scattered notes with one shared source of truth for an AV programming team.',
-      // TODO: replace with a real screenshot - drop the image file in /public and set image: 'teamhub.png'
+      image: 'team_hub_screenshot.png',
       tags: ['JavaScript', 'HTML/CSS', 'Team Tooling', 'Local Storage'],
       githubLink: 'https://github.com/estherkdy/team-hub',
       demoLink: 'https://estherkdy.github.io/team-hub/',
@@ -21,7 +22,7 @@ const Projects = () => {
     {
       title: 'SP Hub',
       description: 'A guided Python desktop application for building the configuration files an internal AV control-system framework uses to instantiate a room. Write-up and demo coming soon.',
-      // TODO: replace with a real screenshot - drop the image file in /public and set image: 'sphub.png'
+      image: 'sp_hub.png',
       tags: ['Python', 'CustomTkinter', 'AV Programming'],
       status: 'Coming Soon',
       placeholder: true,
