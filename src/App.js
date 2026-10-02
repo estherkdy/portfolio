@@ -65,6 +65,15 @@ const Hero = () => {
           >
             <img src="/CTS_small_badge_EstherKim.png" alt="AVIXA CTS Certified" className="hero-badge" />
           </a>
+          <a
+            href="/SecPlus_Certificate_EstherKim.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-badge-link"
+            title="CompTIA Security+ - view certificate"
+          >
+            <img src="/SecPlus_badge_EstherKim.png" alt="CompTIA Security+ Certified" className="hero-badge" />
+          </a>
         </h1>
         <p className="tagline">
           AV Control Systems Programmer building reliable, well-documented systems -

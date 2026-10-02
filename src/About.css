@@ -88,6 +88,8 @@ body.light-mode .cert-card {
   border-color: var(--light-border);
 }
 
+.cert-card + .cert-card { margin-top: 14px; }
+
 .cert-badge { width: 64px; height: 64px; flex-shrink: 0; }
 
 .cert-details h4 { margin: 0 0 4px 0; font-size: 1.05rem; }
@@ -110,15 +112,6 @@ body.light-mode .cert-details p { color: var(--light-text-muted); }
 }
 
 .cert-links a:hover { text-decoration: underline; }
-
-.cert-note {
-  margin-top: 14px !important;
-  font-size: 0.9rem !important;
-  font-style: italic;
-  color: var(--dark-text-muted);
-}
-
-body.light-mode .cert-note { color: var(--light-text-muted); }
 
 @media (max-width: 480px) {
   .cert-card { flex-direction: column; text-align: center; }

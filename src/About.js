@@ -37,6 +37,16 @@ const About = () => {
           <div className="certifications">
             <h2>Certifications</h2>
             <div className="cert-card">
+              <img src="/SecPlus_badge_EstherKim.png" alt="CompTIA Security+ Certified badge" className="cert-badge" />
+              <div className="cert-details">
+                <h4>CompTIA Security+</h4>
+                <p>CompTIA &middot; September 2026</p>
+                <div className="cert-links">
+                  <a href="/SecPlus_Certificate_EstherKim.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                </div>
+              </div>
+            </div>
+            <div className="cert-card">
               <img src="/CTS_small_badge_EstherKim.png" alt="AVIXA Certified Technology Specialist badge" className="cert-badge" />
               <div className="cert-details">
                 <h4>Certified Technology Specialist (CTS)</h4>
@@ -47,7 +57,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <p className="cert-note">Currently studying for CompTIA Security+.</p>
           </div>
         </div>
       </div>
